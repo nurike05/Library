@@ -21,3 +21,17 @@
     }
 </table>
 
+@helper MySecondHelper(List<Books> list)
+{
+    @foreach (var item in list)
+    {
+        <tr>
+            <td>@item.Title</td>
+            <td>@item.Price</td>
+            <td>@item.Pages</td>
+            <td>@Html.ActionLink("Редактировать книгу", "Edit", new { id = @item.Id })</td>
+            <td>@Html.ActionLink("Удалить книгу", "Delete", new { id = @item.Id })</td>
+        </tr>
+
+    }
+}

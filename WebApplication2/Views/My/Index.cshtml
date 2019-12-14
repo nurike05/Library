@@ -10,10 +10,11 @@
 @Html.ActionLink("Create new author", "Create")
 
 @{Html.RenderPartial("_MyPartialView", Model); }
-
-@ViewBag.AuthorName
-@ViewData["AuthorName"]
-@TempData["AuthorName"]
+@{ 
+    List<Authors> listViewBag = ViewBag.AuthorList;
+    List<Authors> listViewData = (List<Authors>)ViewData["AuthorList"];
+@*@TempData["AuthorList"]*@
+    }
 <script>
 
 </script>

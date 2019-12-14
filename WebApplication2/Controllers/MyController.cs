@@ -16,9 +16,9 @@ namespace WebApplication2.Controllers
             {
                 var authors = db.Authors.ToList();
 
-                ViewBag.AuthorName = db.Authors.Select(a => a.FirstName).FirstOrDefault();
-                ViewData["AuthorName"] = db.Authors.Select(a => a.FirstName.EndsWith("w")).FirstOrDefault();
-                TempData["AuthorName"] = db.Authors.Select(a => a.FirstName.StartsWith("o")).FirstOrDefault();
+                ViewBag.AuthorList = db.Authors.Select(a => a.FirstName).FirstOrDefault();
+                ViewData["AuthorList"] = db.Authors.Select(a => a.FirstName.EndsWith("w")).FirstOrDefault();
+                TempData["AuthorList"] = db.Authors.Select(a => a.FirstName.StartsWith("o")).FirstOrDefault();
 
                 return View(authors);
             }
