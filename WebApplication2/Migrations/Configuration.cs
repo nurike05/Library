@@ -9,7 +9,7 @@ namespace WebApplication2.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(WebApplication2.Model1 context)

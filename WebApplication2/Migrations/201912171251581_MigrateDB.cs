@@ -3,7 +3,7 @@ namespace WebApplication2.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class FirstMigration : DbMigration
+    public partial class MigrateDB : DbMigration
     {
         public override void Up()
         {
@@ -12,7 +12,7 @@ namespace WebApplication2.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        FirstName = c.String(),
+                        FirstName = c.String(nullable: false),
                         LastName = c.String(),
                     })
                 .PrimaryKey(t => t.Id);
@@ -26,25 +26,34 @@ namespace WebApplication2.Migrations
                         Price = c.Int(nullable: false),
                         Pages = c.Int(nullable: false),
                         AuthorId = c.Int(nullable: false),
+                        GanreId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
-            //CreateTable(
-            //    "dbo.__MigrationHistory",
-            //    c => new
-            //        {
-            //            MigrationId = c.String(nullable: false, maxLength: 150),
-            //            ContextKey = c.String(nullable: false, maxLength: 300),
-            //            Model = c.Binary(nullable: false),
-            //            ProductVersion = c.String(nullable: false, maxLength: 32),
-            //        })
-            //    .PrimaryKey(t => new { t.MigrationId, t.ContextKey });
+            CreateTable(
+                "dbo.Ganres",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.Users",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        UsersName = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
             
         }
         
         public override void Down()
         {
-            DropTable("dbo.__MigrationHistory");
+            DropTable("dbo.Users");
+            DropTable("dbo.Ganres");
             DropTable("dbo.Books");
             DropTable("dbo.Authors");
         }

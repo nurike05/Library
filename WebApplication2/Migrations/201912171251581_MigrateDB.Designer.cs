@@ -7,13 +7,13 @@ namespace WebApplication2.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AddTableUsers : IMigrationMetadata
+    public sealed partial class MigrateDB : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddTableUsers));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(MigrateDB));
         
         string IMigrationMetadata.Id
         {
-            get { return "201911300608056_AddTableUsers"; }
+            get { return "201912171251581_MigrateDB"; }
         }
         
         string IMigrationMetadata.Source

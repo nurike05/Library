@@ -165,36 +165,15 @@
     <Compile Include="Entities\Books.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MyController.cs" />
-    <Compile Include="Entities\C__MigrationHistory.cs" />
     <Compile Include="Entities\Ganre.cs" />
     <Compile Include="Entities\Users.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Entities\Model1.cs" />
-    <Compile Include="Migrations\201911300555262_FirstMigration.cs" />
-    <Compile Include="Migrations\201911300555262_FirstMigration.Designer.cs">
-      <DependentUpon>201911300555262_FirstMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201911300608056_AddTableUsers.cs" />
-    <Compile Include="Migrations\201911300608056_AddTableUsers.Designer.cs">
-      <DependentUpon>201911300608056_AddTableUsers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201911300613506_AlterTableBookandUser.cs" />
-    <Compile Include="Migrations\201911300613506_AlterTableBookandUser.Designer.cs">
-      <DependentUpon>201911300613506_AlterTableBookandUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201911300616084_AlterTableBook.cs" />
-    <Compile Include="Migrations\201911300616084_AlterTableBook.Designer.cs">
-      <DependentUpon>201911300616084_AlterTableBook.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201912140347135_AlterUsers.cs" />
-    <Compile Include="Migrations\201912140347135_AlterUsers.Designer.cs">
-      <DependentUpon>201912140347135_AlterUsers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201912140412561_AlterBook.cs" />
-    <Compile Include="Migrations\201912140412561_AlterBook.Designer.cs">
-      <DependentUpon>201912140412561_AlterBook.cs</DependentUpon>
+    <Compile Include="Migrations\201912171251581_MigrateDB.cs" />
+    <Compile Include="Migrations\201912171251581_MigrateDB.Designer.cs">
+      <DependentUpon>201912171251581_MigrateDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -270,23 +249,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201911300555262_FirstMigration.resx">
-      <DependentUpon>201911300555262_FirstMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201911300608056_AddTableUsers.resx">
-      <DependentUpon>201911300608056_AddTableUsers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201911300613506_AlterTableBookandUser.resx">
-      <DependentUpon>201911300613506_AlterTableBookandUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201911300616084_AlterTableBook.resx">
-      <DependentUpon>201911300616084_AlterTableBook.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201912140347135_AlterUsers.resx">
-      <DependentUpon>201912140347135_AlterUsers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201912140412561_AlterBook.resx">
-      <DependentUpon>201912140412561_AlterBook.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201912171251581_MigrateDB.resx">
+      <DependentUpon>201912171251581_MigrateDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
